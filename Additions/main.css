@@ -1,0 +1,1044 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/*reset of CSS is over*/
+
+/*Fonts*/
+@font-face {
+	font-family: "Muli Black";
+	src: url("fonts/Muli-Black.ttf") format("truetype");
+}
+@font-face {
+	font-family: "Trirong Light";
+	src: url("fonts/Trirong-Light.ttf") format("truetype");
+}
+@font-face {
+	font-family: "Trirong Regular";
+	src: url("fonts/Trirong-Regular.ttf") format("truetype");
+}
+@font-face {
+	font-family: "Muli";
+	src: url("fonts/Muli.ttf") format("truetype");
+}
+@font-face {
+	font-family: "Muli ExtraLight";
+	src: url("fonts/Muli-ExtraLight.ttf") format("truetype");
+}
+@font-face {
+	font-family: "Muli Light";
+	src: url("fonts/Muli-Light.ttf") format("truetype");
+}
+@font-face {
+	font-family: "Muli Semibold";
+	src: url("fonts/Muli-SemiBold.ttf") format("truetype");
+}
+/*over Fonts*/
+
+/*header style*/
+header {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 1600px;
+	height: 900px;
+	background-image: url("img/photoDacota.jpg");
+	background-size: 100% 100%;	
+}
+.wrapHeaderUp {
+	display: flex;
+	flex-direction: row;	
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.wrapHeaderUp__innerLeft {
+	flex:2;
+	align-items: flex-start;
+	flex-direction: column;
+	padding-top: 60px;
+}
+.innerLeft__logo {
+	float: left;
+	margin-right: 10px;
+}
+.innerLeft__logoText {
+	color: white;
+	font-size: 20px;
+	margin: 8px 0 0 0;
+	font-family: "Muli Black","Trirong Light","Arial";
+}
+.innerLeft__headerPlus {
+	margin-top: 50px;
+	padding-bottom: 70px;
+	opacity: 0.6;
+}
+h1 {
+	color: white;
+	font-size: 60px;
+	line-height: 1.2;
+	font-family: "Trirong Light","Arial";
+}
+.innerLeft__aboutDacota {
+	color: white;
+	font-size: 20px;
+	margin-top: 20px;
+	font-family: "Muli ExtraLight","Trirong Light","Arial";
+	opacity: 0.6;
+}
+.innerLeft__button {
+	width: 200px;
+	height: 50px;
+	margin-top: 50px;
+	color: rgb(43,45,92);
+	background-color: rgb(242,194,0);
+	border: 0px solid rgb(242,194,0);
+	border-radius: 30px;
+}
+
+.wrapHeaderUp__innerRight {
+	flex:1;
+	align-items: flex-start;
+	text-align: center;
+	padding-top: 60px;
+	padding-left: 10px;
+}
+
+.navHeader__link {
+	color: white;
+	margin: 0 10px;
+	cursor: default;
+}
+.navHeader__link {
+	display: inline-block;
+	position: relative;
+	text-decoration: none;
+	font-size: 14px;
+	font-family: "Muli Semibold","Trirong Light","Arial";
+}
+.navHeader__link::before {
+	display: block;
+	position: absolute;
+	margin-bottom: -10px;
+	content: "";
+	height: 2px;
+	width: 0;
+	background-color: rgb(242,194,0);
+	transition: width .5s ease-in-out, left .5s ease-in-out;
+	left: 50%;
+	bottom: 0;
+}
+.navHeader__link::after {
+	display: block;
+	position: absolute;
+	margin-bottom: -10px;
+	content: "";
+	height: 2px;
+	width: 0;
+	background-color: rgb(242,194,0);
+	transition: width .5s ease-in-out;
+	left: 50%;
+	bottom: 0;
+}
+.navHeader__link:hover::before{
+	width: 50%;
+	left: 0;
+}
+.navHeader__link:hover::after{
+	width: 50%;
+}
+
+.wrapHeaderDown {
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+	align-items: flex-end;
+	justify-content: space-between;
+}
+.wrapHeaderDown__left{
+	width: 310px;
+	text-align: left;
+	align-items: stretch;
+}
+#decorationHeaderLeftBlocks {
+	width: 140px;
+	height: 140px;
+	opacity: 0.2;
+}
+.wrapHeaderDown__center {
+	text-align: center;
+	margin-bottom: 40px;
+}
+.wrapHeaderDown__right {
+	/*flex: 1;*/
+	width: 310px;
+	height: 150px;
+	text-align: right;
+	align-items: flex-end;
+	background: url("img/headerBottomPlus.png") /*100% 100% no-repeat*/;
+	background-size: 100% 100%;
+}
+#decorationHeaderRightBlocks {
+	margin-top: 10px;
+	width: 140px;
+	height: 140px;
+	opacity: 0.2;
+}
+
+.wrapHeaderDown_socialFacebook {
+	position: relative;
+	right: 185px;
+	bottom: 48px;
+}
+.wrapHeaderDown_socialTwitter {
+	position: relative;
+	right: 150px;
+	bottom: 72px;
+}
+.wrapHeaderDown_socialVk {
+	position: relative;
+	right: 115px;
+	bottom: 95px;
+}
+.wrapHeaderDown_socialSkype {
+	position: relative;
+	right: 80px;
+	bottom: 118px;
+}
+/*over header style*/
+
+/*section aboutMySelf style*/
+.aboutMySelf {
+	display: flex;
+	width: 1600px;
+	background: url("img/backColor.jpg") 0 0 no-repeat,
+	white;
+	background-size: 100% 84%;
+}
+.aboutMySelf__boxGirlPhotocamera {
+	flex-basis: 40%;
+	height: 930px;
+}
+.boxGirlPhotocamera__wrapBoxGirlPhotocamera {
+	display: flex;
+	align-items: flex-end;
+	width: 515px;
+	height: 730px;
+	margin: 100px 140px 100px 0;
+	background: url("img/photoGirlRightBlocks.png") 100% 0 no-repeat,
+	url("img/girlWithCamera.jpg") 0 0 no-repeat;
+}
+.boxGirlPhotocamera__wrapBoxGirlPhotocamera img {
+	align-items: flex-end;
+	margin-bottom: 55px;
+	opacity: 0.5;
+}
+
+.aboutMySelf__boxAboutMeaAndWhatIDo {
+	display: flex;
+	flex-direction: column;
+	flex-basis: 47%;
+	height: 930px;
+}
+h2 {
+	margin-top: 165px;
+	font-size: 40px;
+	color: rgb(43,45,92);
+	font-family: "Trirong Light","Arial";
+}
+.boxAboutMeaAndWhatIDo__textAboutMe {
+	margin-top: 40px;
+	font-size: 16px;
+	color: rgb(89,86,102);
+	font-family: "Muli Light","Arial";
+	text-align: justify;
+}
+.boxAboutMeaAndWhatIDo__WhatIDo {
+	margin-top: 40px;
+	font-size: 26px;
+	color: rgb(43,45,92);
+	font-family: "Trirong Light","Arial";
+}
+.boxAboutMeaAndWhatIDo__photoSkillsLinks {
+	display: flex;
+	justify-content: space-between;
+}
+.photoSkillsLinks__fashion {
+	align-items: flex-end;
+	width: 130px;
+	height: 190px;
+}
+.photoSkillsLinks__fashion p {
+	margin: 35px 0 20px 0;
+	font-size: 16px;
+	color: rgb(43,45,92);
+	font-family: "Muli Semibold","Trirong Light","Arial";
+}
+.photoSkillsLinks__portraits {
+	align-items: flex-end;
+	width: 130px;
+	height: 190px;
+	margin: 0 10px;
+}
+.photoSkillsLinks__portraits p {
+	margin: 35px 0 20px 0;
+	font-size: 16px;
+	color: rgb(43,45,92);
+	font-family: "Muli Semibold","Trirong Light","Arial";
+}
+.photoSkillsLinks__lifestyle {
+	align-items: flex-end;
+	width: 130px;
+	height: 190px;
+}
+.photoSkillsLinks__lifestyle p {
+	margin: 35px 0 20px 0;
+	font-size: 16px;
+	color: rgb(43,45,92);
+	font-family: "Muli Semibold","Trirong Light","Arial";
+}
+.boxAboutMeaAndWhatIDo__button {
+	margin-top: 60px;
+	width: 285px;
+	height: 60px;
+	color: white;
+	background-color: rgb(43,45,92);
+	border: 0px solid rgb(43,45,92);
+	border-radius: 30px;
+	font-family: "Muli Semibold","Trirong Light","Arial";
+}
+/*over section aboutMySelf style*/
+
+
+/*section HappyClients style*/
+.happyClients {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 1600px;
+	height: 290px;
+	background-image: url("img/backHappyClients.jpg");
+	background-size: 100% 100%
+}
+.happyClients__wrapHeadline{
+	display: flex;
+	flex-direction: row;
+	height: 110px;
+	align-items: flex-end;
+}
+h3 {
+	text-align: center;
+	font-size: 40px;
+	color: white;
+	font-family: "Trirong Light","Arial";
+}
+.happyClients__wrapHappyClients {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+.wrapHappyClients_centetLabel {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.oneClient {
+	width: 160px;
+	height: 30px;
+	margin: 40px 25px 0 25px;
+}
+.twoClient {
+	width: 120px;
+	height: 50px;
+	margin: 45px 25px 0 25px;
+}
+.threeClient {
+	width: 160px;
+	height: 30px;
+	margin: 30px 25px 0 25px;
+}
+.fourClient{
+	width: 160px;
+	height: 50px;
+	margin: 40px 25px 0 25px;
+}
+.fiveClient {
+	width: 120px;
+	height: 50px;
+	margin: 30px 25px 0 25px;
+}
+.sixClient {
+	width: 140px;
+	height: 50px;
+	margin: 40px 25px 0 25px;
+}
+/*over section HappyClients style*/
+
+/* section Portfolio style*/
+.Portfolio {
+	display: flex;
+	align-items: center;
+	width: 1600px;
+	height: 1100px;
+}
+.Portfolio__wrapPortfolio {
+	display: flex;
+	width: 100%;
+	height: 900px;
+}
+.wrapPortfolio__textPortfolio {
+	width: 540px;
+	height: 900px;
+	background: url("img/backOrangePortfolio.jpg") 0 0 no-repeat,
+				url("img/backGreyPortfolio.jpg") 0 0 no-repeat;
+}
+.textPortfolio__textPortfolioInBorder {
+	width: 538px;
+	height: 850px;
+	margin-top: 50px;
+	border: 1px solid rgb(77,64,124);
+	border-left: 0px solid rgb(242,194,0); 
+}
+h4 {
+	font-size: 40px;
+	font-family: "Trirong Regular", "Trirong Light","Arial";
+	color: rgb(43,45,92);
+	margin: 150px 0 70px 80px;
+}
+.textPortfolioInBorder__text {
+	font-size: 16px;
+	font-family: "Muli Light","Arial";
+	color: rgb(102,89,65);
+	text-align: justify;
+	margin: 0 115px 40px 80px;
+}
+.textPortfolioInBorder__link {
+	font-size: 16px;
+	font-family: "Muli Semibold","Trirong Light","Arial";
+	color: rgb(63,60,83);
+	margin-left: 80px;
+	cursor: default;
+}
+.textPortfolioInBorder__link:hover {
+	color: green;
+}
+
+.wrapPortfolio_photoAndSocial {
+	display: flex;
+	flex-direction: column;
+	height: 900px;
+}
+
+.photoAndSocial_backgroundCameraWithSocial {
+	width: 370px;
+	height: 460px;
+	background: url("img/PortfolioOne.jpg");
+	margin-bottom: 30px;
+	margin-right: 30px;
+	position: relative;
+	right: 1px;
+}
+.photoAndSocial_backgroundMarriage {
+	width: 370px;
+	height: 250px;
+	background: url("img/PortfolioTwo.jpg");
+	margin-bottom: 60px;
+	position: relative;
+	right: 1px;
+}
+.photoAndSocial__button {
+	width: 215px;
+	height: 50px;
+	margin-left: 50px;
+	background-color: white;
+	color: rgb(242,194,0);
+	border: 1px solid rgb(242,194,0);
+	border-radius: 30px;
+	font-size: 16px;
+	font-family: "Muli Semibold","Trirong Light","Arial";
+}
+
+.photoAndSocial_socialFacebook {
+	position: relative;
+	left: 137px;
+	bottom: 436px;
+}
+.photoAndSocial_socialTwitter {
+	position: relative;
+	left: 177px;
+	bottom: 460px;
+}
+.photoAndSocial_socialVk {
+	position: relative;
+	left: 217px;
+	bottom: 484px;
+}
+.photoAndSocial_socialTitle{
+	position: relative;
+	left: 177px;
+	bottom: 540px;
+}
+
+.wrapPortfolio__photo {
+	display: flex;
+	flex-direction: column;
+	width: 665px;
+	height: 750px;
+}
+.photo_backgroundManAndGirl {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 665px;
+	height: 230px;
+	margin-bottom: 30px;
+}
+.backgroundManAndGirl_photoMan {
+	width: 470px;
+	height: 230px;
+	background-image: url("img/PortfolioThreeMan.jpg");	
+	background-size: 100% 100%;
+}
+.backgroundManAndGirl_photoGirl {
+	width: 160px;
+	height: 230px;
+	background-image: url("img/PortfolioFourGirl.jpg");	
+	background-size: 100% 100%;
+}
+.photo_backgroundViolinAndGlasses {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 665px;
+	height: 230px;
+	margin-bottom: 30px;
+}
+.backgroundViolinAndGlasses_photoViolin {
+	width: 300px;
+	height: 230px;
+	background-image: url("img/PortfolioFiveViolin.jpg");	
+	background-size: 100% 100%;
+}
+.backgroundViolinAndGlasses_photoGlasses {
+	width: 330px;
+	height: 230px;
+	background-image: url("img/PortfolioSixGlasses.jpg");	
+	background-size: 100% 100%;
+}
+.photo_backgroundChild {
+	width: 665px;
+	height: 220px;
+	background-image: url("img/PortfolioSevenChild.jpg");	
+	background-size: 100% 100%;
+}
+/*over section Portfolio style*/
+
+/*section Blog style*/
+.blog {
+	display: flex;
+	width: 1600px;
+	height: 1030px;
+	background: url("img/backGreyBlog.jpg") 0 0 no-repeat,
+	white;
+	background-size: 100% auto;
+}
+.blog__blogLeftPlus {
+	width: 340px;
+	height: 630px;
+	position: absolute;
+	top: 3430px;
+	left: 20px;
+}
+.blog__blogRightPlus {
+	width: 340px;
+	height: 650px;
+	position: absolute;
+	top: 2965px;
+	left: 1210px;
+}
+
+.blog__leftBlockBox {
+	position: relative;
+	width: 28%;
+	height: 620px;
+	margin: 65px 0 0 65px;
+	background: url("img/backBlogBicycle.jpg") 0 0 no-repeat;
+	background-size: 100% 100%;
+}
+.leftBlockBox__Headline {
+	margin: 290px 35px 25px 35px;
+	font-size: 20px;
+	text-align: justify;
+	color: rgb(43,45,92);
+	font-family: "Muli Semibold","Trirong Light","Arial";
+}
+.leftBlockBox__date {
+	margin-left: 35px;
+	font-size: 15px;
+	color: rgb(85,87,125);
+	font-family: "Muli","Muli Semibold","Arial";
+}
+.leftBlockBox__date span {
+	font-weight: 900;
+}
+.leftBlockBox__textBlog {
+	margin: 25px 35px;
+	font-size: 16px;
+	text-align: justify;
+	line-height: 1.5;
+	color: rgb(122,120,133);
+	font-family: "Muli Light","Arial";
+}
+.blog__leftBlockBox img {
+	margin-left: 35px;
+}
+.leftBlockBox__readMore {
+	position: relative;
+	left: 35px;
+	bottom: 22px;
+	font-size: 16px;
+	color: rgb(89,86,102);
+	font-family: "Muli","Muli Semibold","Arial";
+}
+.leftBlockBox__readMore:hover {
+	color: red;
+	cursor: default;
+}
+
+.blog__centerBlockBox {
+	width: 44%;
+	height: 1030px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+h5 {
+	font-size: 40px;
+	font-family: "Trirong Light","Arial";
+	color: rgb(43,45,92);
+	margin: 65px 0 35px 0;
+}
+.centerBlockBox__aboutBlog {
+	font-size: 20px;
+	font-family: "Muli Light","Arial";
+	color: rgb(84,86,124);
+	font-weight: 600;
+	line-height: 1.6;
+	text-align: center;
+	margin: 0 60px 40px 60px;
+}
+.centerBlockBox__bottomBlockBox {
+	width: 78%;
+	height: 730px;
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+	background: url("img/backBlogGirl2.jpg") 0 0 no-repeat;
+	background-size: 100% 100%;
+}
+.bottomBlockBox__Headline {
+	padding: 340px 65px 25px 65px;
+	font-size: 20px;
+	text-align: justify;
+	color: rgb(43,45,92);
+	font-family: "Muli Semibold","Trirong Light","Arial";
+}
+.bottomBlockBox__date {
+	margin-left: 65px;
+	font-size: 15px;
+	color: rgb(85,87,125);
+	font-family: "Muli","Muli Semibold","Arial";
+}
+.bottomBlockBox__date span {
+	font-weight: 900;
+}
+.bottomBlockBox__textBlog {
+	margin: 25px 65px;
+	font-size: 16px;
+	text-align: justify;
+	line-height: 1.5;
+	color: rgb(122,120,133);
+	font-family: "Muli Light","Arial";
+}
+.centerBlockBox__bottomBlockBox img {
+	margin-left: 65px;
+}
+.bottomBlockBox__readMore {
+	position: relative;
+	left: 65px;
+	bottom: 22px;
+	font-size: 16px;
+	color: rgb(89,86,102);
+	font-family: "Muli","Muli Semibold","Arial";
+}
+.bottomBlockBox__readMore:hover {
+	color: red;
+	cursor: default;
+}
+
+.blog__rightBlockBox {
+	position: relative;
+	width: 28%;
+	height: 620px;
+	margin: 65px 65px 0 0;
+	background: url("img/backBlogMarrige.jpg") 0 0 no-repeat;
+	background-size: 100% 100%;
+}
+.rightBlockBox__Headline {
+	margin: 290px 35px 25px 35px;
+	font-size: 20px;
+	text-align: justify;
+	color: rgb(43,45,92);
+	font-family: "Muli Semibold","Trirong Light","Arial";
+}
+.rightBlockBox__date {
+	margin-left: 35px;
+	font-size: 15px;
+	color: rgb(85,87,125);
+	font-family: "Muli","Muli Semibold","Arial";
+}
+.rightBlockBox__date span {
+	font-weight: 900;
+}
+.rightBlockBox__textBlog {
+	margin: 25px 35px;
+	font-size: 16px;
+	text-align: justify;
+	line-height: 1.5;
+	color: rgb(122,120,133);
+	font-family: "Muli Light","Arial";
+}
+.blog__rightBlockBox img {
+	margin-left: 35px;
+}
+.rightBlockBox__readMore {
+	position: relative;
+	left: 35px;
+	bottom: 22px;
+	font-size: 16px;
+	color: rgb(89,86,102);
+	font-family: "Muli","Muli Semibold","Arial";
+}
+.rightBlockBox__readMore:hover {
+	color: red;
+	cursor: default;
+}
+/*over section Blog style*/
+
+/*footer style*/
+footer {
+	display: flex;
+	flex-direction: column;
+	width: 1600px;
+	height: 960px;
+	background-image: url("img/backFooter2.jpg");
+	background-size: 100% 100%;	
+}
+.footer__sectionForms {
+	display: flex;
+	flex-direction: row;
+	justify-content: center; 
+	width: 100%;
+	height: 470px;
+}
+.sectionForms__wrapSectionForms {
+	display: flex;
+	flex-direction: column;
+	width: 75%;
+	height: 470px;
+	padding-top: 60px;
+	text-align: center;
+}
+h6 {
+	font-size: 40px;
+	font-family: "Trirong Light","Arial";
+	color: white;
+	margin-bottom: 45px;
+}
+.wrapSectionForms__loginForm input {
+	width: 500px;
+	height: 45px;
+	background-color: rgb(182,183,199);
+	color: rgb(43,45,92);
+	font-size: 15px;
+	font-family: "Muli Light","Arial";
+	font-weight: 900;
+	padding-left: 30px;
+	border: 0px solid rgb(182,183,199);
+	margin-bottom: 25px;
+}
+.wrapSectionForms__emailForm input {
+	width: 500px;
+	height: 45px;
+	background-color: rgb(182,183,199);
+	color: rgb(43,45,92);
+	font-size: 15px;
+	font-family: "Muli Light","Arial";
+	font-weight: 900;
+	padding-left: 30px;
+	border: 0px solid rgb(182,183,199);
+	margin-bottom: 25px;
+}
+.wrapSectionForms__massageForm textarea {
+	width: 500px;
+	height: 70px;
+	background-color: rgb(182,183,199);
+	color: rgb(43,45,92);
+	font-size: 15px;
+	font-family: "Muli Light","Arial";
+	font-weight: 900;
+	padding-left: 30px;
+	padding-top: 15px;
+	border: 0px solid rgb(182,183,199);
+	margin-bottom: 35px;
+}
+.wrapSectionForms__button {
+	width: 200px;
+	height: 50px;
+	color: rgb(43,45,92);
+	background-color: rgb(255,204,0);
+	border: 0px solid rgb(255,204,0);
+	border-radius: 30px;	
+	font-size: 15px;
+	font-family: "Muli Light","Arial";
+	margin-left: auto;
+	margin-right: auto;
+}
+.wrapSectionForms__upArrows {
+	width: 70px;
+	height: 55px;
+	margin-top: 8px;
+	position: relative;
+	left: 1120px;
+}
+.footer__linkAndNavigation {
+	padding: 0 200px 0 200px;
+}
+
+
+.linkAndNavigation__wrapLinkAndNavigation {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	height: 420px;
+}
+.footerContact__logo {
+	float: left;
+	margin-right: 10px;
+	margin-top: 130px;
+}
+.footerContact__logoText {
+	float: left;
+	color: white;
+	font-size: 20px;
+	margin: 138px 0 35px 0;
+	font-family: "Muli Black","Trirong Light","Arial";
+}
+.footerContact__textContact {
+	clear: both;
+	font-size: 20px;
+	color: white;
+	font-family: "Muli Semibold","Trirong Light","Arial";
+	margin-bottom: 20px;
+}
+.footerContact__Address {
+	font-size: 14px;
+	color: white;
+	font-family: "Muli Light","Arial";
+	line-height: 1.5;
+}
+.footerContact__followMeOn {
+	margin-top: 40px;
+	font-size: 20px;
+	color: white;
+	font-family: "Muli Semibold","Trirong Light","Arial";
+}
+
+.wrapLinkAndNavigation_socialFacebook {
+	position: relative;
+	left: 0px;
+	top: 15px;
+}
+.wrapLinkAndNavigation_socialTwitter {
+	position: relative;
+	left: 35px;
+	bottom: 9px;
+}
+.wrapLinkAndNavigation_socialVk {
+	position: relative;
+	left: 70px;
+	bottom: 32px;
+}
+.wrapLinkAndNavigation_socialSkype {
+	position: relative;
+	left: 105px;
+	bottom: 55px;
+}
+
+.latestBlogPosts__latestBlogPosts {
+	font-size: 24px;
+	color: white;
+	font-family: "Muli Light","Arial";
+	margin-top: 130px;
+}
+.innerUpBlock__fotoAfroAmGirl {
+	float: left;
+	margin: 30px 30px 30px 0;
+}
+.innerUpBlock__designMethod {
+	float: left;
+	margin-top: 26px;
+	font-size: 16px;
+	line-height: 1.1;
+	color: rgb(192,192,206);
+	font-family: "Muli Light","Arial";
+	margin-bottom: 15px;
+}
+.innerUpBlock__date {
+	float: bottom;
+	font-size: 14px;
+	color: white;
+	font-family: "Muli","Muli Semibold","Arial";
+}
+.innerUpBlock__date span {
+	font-weight: 900;
+}
+
+.latestBlogPosts__innerDownBlock {
+	clear: both;
+}
+.latestBlogPosts__fotoUsaMen {
+	display: inline-block;
+}
+.fotoUsaMen__innerForText {
+	display: inline-block;
+}
+.innerForText__designMethod {
+	font-size: 16px;
+	line-height: 1.1;
+	color: rgb(192,192,206);
+	font-family: "Muli Light","Arial";
+	margin-bottom: 18px;
+	margin-left: 26px;
+}
+.innerForText__date {
+	font-size: 14px;
+	color: white;
+	font-family: "Muli","Muli Semibold","Arial";
+	margin-left: 26px;
+}
+.innerForText__date span {
+	font-weight: 900;
+}
+.latestBlogPosts__linkMore {
+	margin-top: 30px;
+	margin-left: 100px;
+	font-size: 16px;
+	color: white;
+	font-family: "Muli Semibold","Trirong Light","Arial";
+}
+.latestBlogPosts__linkMore:hover {
+	color: yellow;
+	cursor: default;
+}
+.wrapLinkAndNavigation__linkNavigation {
+	display: flex;
+	flex-direction: column;
+}
+.linkNavigation__headlineNavText {
+	font-size: 24px;
+	color: white;
+	font-family: "Muli Light","Arial";
+	margin: 130px 0 30px 0;
+
+}
+.linkNavigation__navFooter {
+	display: flex;
+	flex-direction: column;
+}
+.navFooter__link {
+	font-size: 14px;
+	color: white;
+	font-family: "Muli Semibold","Trirong Light","Arial";
+	margin-bottom: 15px;
+}
+.navFooter__link:hover {
+	color: yellow;
+	cursor: default;
+}
+
+.instagramFooter__headlineInstagText {
+	font-size: 24px;
+	color: white;
+	font-family: "Muli Light","Arial";
+	margin: 130px 0 30px 0;
+}
+
+.innerUpBlock__onePhoto {
+	float: left;
+	margin: 0 10px 10px 0;
+}
+.innerUpBlock__innerRightInUpBlock {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	float: left;
+}
+.innerRightInUpBlock__threePhoto {
+	margin: 10px 0 10px 0;
+}
+.innerDownBlock__fivePhoto {
+	margin: 0 7px 0 7px;
+}
+
+.footer__AllRights {
+	text-align: center;
+}
+.AllRights__text {
+	font-size: 14px;
+	color: rgb(96,98,133);
+	font-family: "Muli ExtraLight","Muli Light","Arial";
+	margin-top: 25px;
+}
+/*over footer style*/
